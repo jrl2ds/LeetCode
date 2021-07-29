@@ -7,7 +7,7 @@ public:
             hashMap.insert({x,i});
             auto iter = hashMap.find((target - x));
             if(iter != hashMap.end() && iter->second != i){
-                vector<int> vect;
+                vector<int> vect; //Can't use initializer list with size_t to int conversion
                 vect.push_back(i);
                 vect.push_back(iter->second);
                 return vect;
